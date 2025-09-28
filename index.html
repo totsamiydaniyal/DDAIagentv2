@@ -1,227 +1,130 @@
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-
   <meta charset="utf-8" />
-
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>MedCompanion — ИИ-агент сопровождения пациента</title>
-
   <meta name="description" content="MedCompanion — персональный ИИ-агент для пациентов: напоминания о приёмах и лекарствах, сбор самочувствия, паспорт здоровья и опция врача-координатора. Бесплатная неделя.">
 
   <style>
-
     /* ========== БАЗА ========== */
-
     body{
-
       margin:0;
-
       font-family: Arial, sans-serif;
-
       background:#f6f8fb;
-
       color:#0f1724;
-
       line-height:1.6;
-
     }
-
     a{text-decoration:none;color:inherit}
-
     .container{max-width:1100px;margin:0 auto;padding:28px;}
 
-
-
     /* ========== HEADER / HERO ========== */
-
     header.hero{
-
       background: linear-gradient(135deg,#355fa8,#2b4f8c);
-
       color:white;
-
       border-bottom-left-radius:30px;
-
       border-bottom-right-radius:30px;
-
       padding:64px 20px;
-
     }
-
     .hero h1{font-size:2.2rem;margin:0 0 12px;line-height:1.05}
-
     .hero p{margin:0 0 18px;color:rgba(255,255,255,0.92);font-size:1.05rem}
-
     .btn{
-
       display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;cursor:pointer;
-
       text-decoration:none;border:0;
-
       transition:0.3s;
-
     }
-
     .btn-primary{background:white;color:#355fa8}
-
     .btn-primary:hover{background:#eee}
-
     .btn-ghost{background:transparent;color:rgba(255,255,255,0.95);border:1px solid rgba(255,255,255,0.12)}
-
     .btn-ghost:hover{background:rgba(255,255,255,0.1)}
 
-
-
     /* ========== FEATURES ========== */
-
     section.features{padding:42px 20px;text-align:center}
-
     section.features h2{color:#355fa8;margin-bottom:30px;font-size:2em}
-
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-
     .card{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(12,18,32,0.06);min-height:120px;transition:transform .25s,box-shadow .25s}
-
     .card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(12,18,32,0.12)}
-
     .card h3{margin:0 0 8px;font-size:1.05rem}
-
     .card p{margin:0;color:#6b7280;font-size:0.95rem}
-
     .card .icon{font-size:1.7rem;margin-bottom:8px}
 
-
-
     /* ========== PRICING ========== */
-
     .pricing{margin-top:32px;display:flex;gap:18px;flex-wrap:wrap;align-items:stretch}
-
     .price-card{background:linear-gradient(180deg,#fff,#fbfdff);padding:20px;border-radius:12px;flex:1;min-width:260px;box-shadow:0 8px 32px rgba(12,18,32,0.06)}
-
     .price-card h4{margin:0 0 10px}
-
     .price-big{font-size:1.8rem;font-weight:700;color:#355fa8}
-
     .small-muted{color:#6b7280;font-size:0.95rem}
 
-
-
     /* ========== FOOTER ========== */
-
     footer{padding:28px 20px;margin-top:36px;color:#6b7280;font-size:0.92rem;text-align:center}
 
-
-
     /* ========== FAQ ========== */
-
     .faq{margin-top:26px;display:grid;gap:12px}
-
     .faq-item{background:white;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(12,18,32,0.04)}
-
     .faq-item h5{margin:0 0 6px;font-size:0.98rem}
-
     .faq-item p{margin:0;color:#6b7280;font-size:0.93rem}
 
+    /* ========== АДАПТИВНОСТЬ ========== */
+    @media(max-width:768px){
+      .hero h1{font-size:1.8rem}
+      .hero p{font-size:0.95rem}
+      .btn{padding:10px 16px;font-size:0.95rem}
+      .price-big{font-size:1.5rem}
+    }
+    @media(max-width:480px){
+      .hero h1{font-size:1.5rem}
+      .hero p{font-size:0.9rem}
+      .btn{width:100%;text-align:center;margin-bottom:10px}
+      .pricing{flex-direction:column}
+    }
   </style>
-
 </head>
 
 <body>
-
   <header class="hero">
-
     <div class="container">
-
       <h1>MedCompanion — ИИ-агент, который сопровождает пациента</h1>
-
       <p>Персональный помощник для контроля приёмов, приёма лекарств и мониторинга самочувствия. Подписка помесячно — с бесплатной неделей для теста.</p>
-
-      <a class="btn btn-primary" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">Получить бесплатную неделю</a>
-
+      <a class="btn btn-primary" href="https://forms.yandex.ru/u/68d9808884227c025c2c8335" target="_blank">Получить бесплатную неделю</a>
       <a class="btn btn-ghost" href="mailto:hello@medcompanion.example?subject=Интерес%20к%20MedCompanion">Связаться с нами</a>
-
     </div>
-
   </header>
 
-
-
   <main class="container">
-
     <section class="features">
-
       <h2>Что входит в MedCompanion</h2>
-
       <div class="grid">
-
         <div class="card"><div class="icon">🔔</div><h3>Уведомления о приёмах</h3><p>Агент отслеживает записи у врачей и напомнит за нужное время до приёма.</p></div>
-
         <div class="card"><div class="icon">💊</div><h3>Напоминания о лекарствах</h3><p>Гибкие напоминания по приёму лекарств и регулярным обследованиям.</p></div>
-
         <div class="card"><div class="icon">📋</div><h3>Сбор самочувствия</h3><p>Ежедневные опросы и хранение данных для паспорта здоровья.</p></div>
-
         <div class="card"><div class="icon">👩‍⚕️</div><h3>Врач-координатор</h3><p>Опционально: врач анализирует данные и консультирует по лечению.</p></div>
-
         <div class="card"><div class="icon">🧾</div><h3>Паспорт здоровья</h3><p>Автоматически формируется на основе твоих показателей и семейного анамнеза.</p></div>
-
       </div>
-
-
 
       <div class="pricing">
-
         <div class="price-card">
-
           <h4>Пробный период</h4>
-
           <div class="price-big">7 дней бесплатно</div>
-
           <p class="small-muted">Без привязки карты — отмена в любой момент.</p>
-
         </div>
-
         <div class="price-card">
-
           <h4>Подписка</h4>
-
           <div class="price-big">₽499/мес</div>
-
           <p class="small-muted">Доступ к ИИ-агенту и опции врача-координатора.</p>
-
-          <a class="btn btn-primary" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">Начать бесплатную неделю</a>
-
+          <a class="btn btn-primary" href="https://forms.yandex.ru/u/68d9808884227c025c2c8335" target="_blank">Начать бесплатную неделю</a>
         </div>
-
       </div>
-
-
 
       <div class="faq">
-
         <div class="faq-item"><h5>Нужно ли вводить данные вручную?</h5><p>Часть данных импортируется, базовые записи вносятся пользователем.</p></div>
-
         <div class="faq-item"><h5>Как подключается врач-координатор?</h5><p>Врач получает доступ к агрегированным данным и координирует лечение.</p></div>
-
         <div class="faq-item"><h5>Можно ли отменить подписку?</h5><p>Да — отмена в любой момент, данные останутся у пользователя.</p></div>
-
       </div>
-
     </section>
-
   </main>
 
-
-
   <footer>
-
     MedCompanion © 2025 — Все права защищены · <a href="mailto:hello@medcompanion.example" style="color:#355fa8">hello@medcompanion.example</a>
-
   </footer>
-
 </body>
-
 </html>
